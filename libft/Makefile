@@ -1,18 +1,19 @@
 # -*-Makefile-*-
 
-NAME = rush-02;
+NAME = libft.a;
 
-SRC = main.c open.c
+SRC = *.c libft.h
+
+FLAGS = -g -Wall -Wextra -Werror
 
 all: $(NAME)
 $(NAME):
-	gcc -o $(NAME) $(SRC)
+	gcc $(FLAGS) -o $(NAME) $(SRC)
 
 clean:
-	rm -f *o
+	rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)
 
-rr: fclean all
-
+re: fclean all
