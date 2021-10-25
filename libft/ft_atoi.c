@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 	}
 	return (test * sign);
 }
-/* 
+/*
 int	main(void)
 {
 	char g[15] = "721894129";
