@@ -23,5 +23,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char *p = "tar";
 
 	printf("%s \n", ft_strnstr(c, p, 5));
-}
- */
+} */

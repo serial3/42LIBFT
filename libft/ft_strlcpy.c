@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -23,14 +23,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		i++;
 	}
-	if (size != 0)
+	if (dstsize != 0)
 	{
-		while (src[j] != '\0' && j < (size - 1))
+		while (src[j] != '\0' && j < (dstsize - 1))
 		{
-			dest[j] = src [j];
+			dst[j] = src [j];
 			j++;
 		}
-		dest[j] = '\0';
+		dst[j] = '\0';
 	}
 	return (i);
 }

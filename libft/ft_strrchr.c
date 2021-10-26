@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	a;
 
 	a = 0;
-	while (str[a] != '\0')
+	while (s[a] != '\0')
 		a++;
-	while (str[a] >= 0)
+	while (s[a] >= 0)
 	{
-		if (str[a] == (char)c)
-			return ((char *)str + a);
+		if (s[a] == (char)c)
+			return ((char *)s + a);
 		a--;
 	}
 	if (c == '\0')
-		return ((char *)str + a);
+		return ((char *)s + a);
 	return (NULL);
 }
 
