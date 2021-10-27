@@ -11,7 +11,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	{
 		*t++ = c;
 	}
-	return (t);
+	return (b);
 }
 
 /* int	main(void)
@@ -19,4 +19,5 @@ void	*ft_memset(void *b, int c, size_t len)
 	char *a = "abcdefghi";
 
 	printf("%p \n", ft_memset(a, '.', 3));
-} */
+}
+ */

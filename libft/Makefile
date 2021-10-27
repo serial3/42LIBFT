@@ -9,7 +9,7 @@ RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
 .c.o:
-	${C} ${CFLAGS} -c -o ${OBJS} -I${INS}
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I.${INS}
 
 ${NAME}: ${OBJS}
 	${LIB} ${NAME} ${OBJS}
