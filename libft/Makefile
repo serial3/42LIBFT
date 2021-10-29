@@ -1,3 +1,7 @@
+TESTS	= tests/test1.c
+TNAME	= test
+TOBJS	= ${TESTS:.c=.o}
+
 SRCS	= *.c
 OBJS	= ${SRCS:.c=.o}
 INS	= libft.h
