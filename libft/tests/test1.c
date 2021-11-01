@@ -18,11 +18,11 @@ static void	original_mem(char *str)
         printf("memcpy(11)[Hello World]: %s\n", str);
 
 	printf("---> ft_memmove <---\n");
-        memmove(str, "Good Day", 20);
+        memmove(str, "Good Day", 9);
         printf("memove(20)[Good Day]: %s\n", str);
 
 	printf("---> ft_memchar <---\n");
-        printf("memchr(a)[%s]: %s\n", str, memchr(str, 97, 8));
+        printf("memchr(a)[%s]: %p\n", str, memchr(str, 97, 8));
 
 	printf("---> ft_memcmp <---\n");
 	char	*s1 = "Hell";
@@ -52,7 +52,7 @@ void	mem_tests(char *str)
 	printf("ft_memove(20)[Good Day]: %s\n", str);
 
 	printf("---> ft_memchar <---\n");
-	printf("ft_memchr(a)[%s]: %s\n", str, ft_memchr(str, 97, 8));
+	printf("ft_memchr(a)[%s]: %p\n", str, ft_memchr(str, 97, 8));
 
 	printf("---> ft_memcmp <---\n");
 	char    *s1 = "Hell";
@@ -80,7 +80,6 @@ void	strn_tests(char *str)
 	printf("ft_strncmp(6)[pulga & %s]: %d\n", str, ft_strncmp("pulga", str, 4));
 	printf("strncmp(6)[pulga & %s]: %d\n", str, strncmp("pulga", str, 4));
 	printf("ft_strncmp(14)[mecanica]: %s\n", ft_strnstr(str, "mecanica", 14) != 0 ? "Founded" : "Not Founded");
-	printf("strncmp(14)[mecanica]: %s\n", strnstr(str, "mecanica", 14) != 0 ? "Founded" : "Not Founded");
 	printf("ft_strncmp: %d\n", ft_strncmp("test\200", "test\0", 6));
 	printf("strncmp: %d\n", strncmp("test\200", "test\0", 6));
 }
@@ -102,11 +101,9 @@ void	strl_tests(char *str)
 	printf("Length: %zu\n", ft_strlen(str));
 	ft_strlcpy(temp, str, 4);
 	printf("ft_strlcpy(4): %s\n", temp);
-	strlcpy(temp2, str, 4);
 	printf("strlcpy(4): %s\n", temp2);
 	ft_strlcat(temp, "PULGA", 5);
 	printf("ft_strlcat(5)[PULGA]: %s\n", temp);
-	strlcat(temp2, "PULGA", 5);
 	printf("strlcat(5)[PULGA]: %s\n", temp2);	
 }
 
