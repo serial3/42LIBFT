@@ -6,7 +6,7 @@
 #    By: dromao-l <dromao-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 16:29:45 by dromao-l          #+#    #+#              #
-#    Updated: 2021/11/03 16:30:09 by dromao-l         ###   ########.fr        #
+#    Updated: 2021/11/03 18:55:48 by dromao-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CFLAGS	= -Wall -Wextra -Werror
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I.${INS}
 
-${NAME}: ${OBJS}
+$(NAME): ${OBJS} ${INS}
 	${LIB} ${NAME} ${OBJS}
 	${RL} ${NAME}
 
