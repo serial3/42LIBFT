@@ -1,7 +1,7 @@
-Still wondering how i'll store all the projects, wether everything on this repository or each with it's own repository.
+Each project will have it-s repository, check in my repos to find other 42 school projects.
 
 Done!
 
-Missing most headers, will fix norme once i go to school.
+Norme ok in everything.
 
 ##### Made by Serial3.
