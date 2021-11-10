@@ -6,7 +6,7 @@
 /*   By: dromao-l <dromao-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:56:21 by dromao-l          #+#    #+#             */
-/*   Updated: 2021/11/03 16:56:22 by dromao-l         ###   ########.fr       */
+/*   Updated: 2021/11/10 16:28:47 by dromao-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*tmp;
-
-	if (lst == NULL)
-		return (NULL);
-	tmp = lst;
-	while (tmp != NULL)
+	if (!lst || !f)
 	{
-		f(tmp->content);
-		tmp = tmp->next;
+		return ;
+	}
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
 	}
 }
